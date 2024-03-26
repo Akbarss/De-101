@@ -1,0 +1,43 @@
+@import 'reset.css';
+@import 'variables.css';
+
+/* Components */
+@import 'components/header.css';
+@import 'components/nav-bar.css';
+@import 'components/banner.css';
+@import 'components/movies.css';
+@import 'components/modal.css';
+@import 'components/lightTheme.css';
+
+/* Screens */
+@import 'screens/home.css';
+@import 'screens/series.css';
+@import 'screens/list.css';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Netflix-Sans';
+  src: url('../Netflix-Sans.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Netflix-Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+  color: #e5e5e5;
+  background-color: #202023;
+  transition: all 0.2s ease-in-out;
+}

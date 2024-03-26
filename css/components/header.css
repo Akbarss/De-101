@@ -1,0 +1,137 @@
+.header {
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.light .header.blur {
+  background-color: #fff2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header.blur {
+  background-color: #000;
+}
+
+.netflix {
+  height: 2.5rem;
+  width: 1.5rem;
+  border-left: 0.5rem solid var(--red);
+  border-right: 0.5rem solid var(--red);
+}
+
+.netflix::before {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: skewX(21.5deg);
+  background-color: var(--red);
+  box-shadow: 0 0 4px #000;
+}
+
+.col:last-child {
+  margin-left: auto;
+  gap: 16px;
+}
+
+.header .col,
+.col .items {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+.col .logo {
+  margin-right: 2.9rem;
+  width: 95px;
+  height: 25px;
+}
+
+.col .search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search .input {
+  max-width: 220px;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  padding: 10px;
+  padding-left: 40px;
+  color: var(--white-darker);
+  outline: none;
+  border-radius: 5px;
+  background-color: #0008;
+  border: 1px solid #fff5;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search .input::placeholder {
+  color: var(--white-darker);
+}
+
+form.active .input {
+  transform: scaleX(1);
+}
+
+form.active .search-btn {
+  transform: translateX(-190px);
+}
+
+svg.search-btn,
+svg.close-btn {
+  width: 24px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+svg.close-btn {
+  width: 1.2rem;
+  position: absolute;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: none;
+}
+
+svg.close-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 390px) {
+  .search .input {
+    max-width: 180px;
+  }
+  form.active .search-btn {
+    transform: translateX(-150px);
+  }
+}
+
+@media screen and (max-width: 713px) {
+  .header {
+    padding: 0.8rem;
+    padding-inline: 20px;
+  }
+  .col:last-child {
+    gap: 8px;
+  }
+}

@@ -1,0 +1,129 @@
+.light {
+  color: #181818;
+  background-color: rgb(240 231 219);
+}
+
+.light .banner,
+.light .card {
+  color: var(--white-darker);
+}
+
+.light svg,
+.light a,
+.light .dropdown a {
+  color: #191919;
+}
+
+.light .item a:hover,
+.light .item a.active {
+  color: #000;
+}
+
+.light .col .input,
+.light .dropdown {
+  background-color: #fff8;
+}
+
+.col .input,
+.dropdown {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.light .input,
+.light .input::placeholder {
+  color: #000;
+}
+
+.light .icon.sun {
+  transform: translateY(3rem);
+  opacity: 0;
+}
+
+.light .icon.moon {
+  transform: none;
+  opacity: 1;
+}
+
+.light nav.mobile > button {
+  border: 1px solid #0005;
+}
+
+.light nav.mobile > button:hover,
+.light .dropdown li:hover {
+  background-color: #edf2f7;
+}
+
+.light .icons {
+  position: relative;
+}
+
+.light .search-movies .wrapper {
+  background-color: #fff5;
+  border: 1px solid #0004;
+}
+
+.light .search-movies .movie {
+  border-bottom: 1px solid #0004;
+}
+
+.light .search-movies .movie:hover {
+  background-color: #edf2f7;
+}
+
+.light .search-movies h3 {
+  color: #191919;
+}
+
+.light .card ::-webkit-scrollbar-thumb,
+.light .wrapper::-webkit-scrollbar-thumb {
+  background-color: #0008;
+}
+
+.light .home .btn {
+  background-color: #0006;
+}
+
+.light .btn a {
+  color: #e5e5e5;
+}
+
+.icon {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0;
+  border-radius: 6px;
+  color: #fffa;
+  border: none;
+  background: #f8d38d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  background-color: #f6ad55;
+}
+
+.icon > img,
+.icon > svg {
+  height: 1rem;
+  width: 1rem;
+  line-height: 1rem;
+}
+
+.icon.moon {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  background-color: #805ad5;
+  transform: translateY(-3rem);
+}
+
+.icon.moon:hover {
+  background-color: #6b46c1;
+}

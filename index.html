@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix</title>
+  <link rel="icon" type="image/png" href="images/logo.png" size="64x64" />
+  <link rel="apple-touch-icon" type="image/png" href="images/logo.png" size="180x180" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const types = ['movie', 'tv']
+  </script>
+  <script type="module" src="js/home.js"></script>
+  <script type="module" src="js/search.js"></script>
+  <script src="js/header.js" defer></script>
+</head>
+
+<body>
+  <script src="js/theme.js"></script>
+  <header class="header">
+    <div class="col">
+      <div id="logo" class="netflix mobile"></div>
+      <img id="logo" class="logo no-mobile" src="images/netflix.svg" alt="netflix logo" />
+
+      <nav id="no-dropdown">
+        <ul class="items white">
+          <li id="home" class="item">
+            <a class="active" href="index.html">Home</a>
+          </li>
+          <li id="series" class="item"><a href="series.html">Series</a></li>
+          <li id="movies" class="item"><a href="movies.html">Movies</a></li>
+          <li id="list" class="item"><a href="list.html">My List</a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <div class="col">
+      <form class="search">
+        <svg class="search-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+          <path fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clipRule="evenodd"></path>
+        </svg>
+
+        <input type="text" placeholder="Search..." class="input" name="title" />
+
+        <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+          <path
+            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+        </svg>
+      </form>
+
+      <div class="icons">
+        <button class="icon moon" onclick="toggleMode()">
+          <img src="images/moon.svg" alt="moon btn" />
+        </button>
+        <button class="icon sun" onclick="toggleMode()">
+          <img src="images/sun.svg" alt="sun btn" />
+        </button>
+      </div>
+
+      <nav id="dropdown">
+        <button class="icon" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg>
+        </button>
+        <ul class="dropdown">
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="series"><a href="series.html">Series</a></li>
+          <li id="movies"><a href="movies.html">Movies</a></li>
+          <li id="list"><a href="list.html">My List</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="search-movies">
+    <div class="wrapper"></div>
+  </section>
+
+  <div class="banner home">
+    <div class="text-wrapper no-mobile">
+      <h2 class="title"></h2>
+      <div class="btn-wrapper large">
+        <div id="playBtn" class="btn play"><a href="#">Play</a></div>
+        <div id="addBtn" class="btn list">
+          <a href="list.html">My List</a>
+        </div>
+      </div>
+      <p class="overview"></p>
+    </div>
+
+    <div class="banner-genres mobile"></div>
+
+    <ul class="btn-wrapper mobile">
+      <li id="addBtn" class="my-list">
+        <a href="list.html">
+          <img src="images/add.svg" alt="add btn" />
+          My List</a>
+      </li>
+      <li id="playBtn" class="play-btn">
+        <a href="#">
+          <img src="images/play.svg" alt="play btn" />
+          Play
+        </a>
+      </li>
+      <li id="infoBtn" class="info-btn">
+        <a href="#">
+          <img src="images/phone-info.svg" alt="info btn" />
+          Info</a>
+      </li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="poster"></div>
+    <p class="copyright">&copy; 2022 Steav Khet. All Rights Reserved.</p>
+  </main>
+
+  <section class="modal overlay">
+    <div class="modal-card card"></div>
+  </section>
+
+  <div class="iframe-wrapper overlay">
+    <iframe title="trailer"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+</body>
+
+</html>

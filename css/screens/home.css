@@ -1,0 +1,55 @@
+.home .title {
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.white .item a {
+  color: var(--white-darker);
+}
+.white .item a:hover,
+.white .item a.active {
+  color: var(--white-lighter);
+}
+
+.home .text-wrapper {
+  margin-bottom: 6vh;
+}
+
+.btn-wrapper.large {
+  padding: 20px 0 15px 0;
+}
+
+.home .overview {
+  padding: 0;
+}
+
+.home .btn {
+  min-width: 120px;
+  background-color: #fff6;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn a {
+  color: #181818;
+  transition: color 0.2s ease-in-out;
+}
+
+.copyright {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1.2rem;
+  opacity: 0.5;
+}
+
+.bottom {
+  z-index: -1;
+  width: 100%;
+  position: fixed;
+  bottom: 1.2rem;
+}
